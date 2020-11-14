@@ -1,0 +1,22 @@
+---
+name: Main
+
+on:
+  push:
+    tags: [ v* ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: docker:19.03.13
+    steps:
+      - name: Set up dependencies
+        run: apk add git make
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build image
+        run: make docker-build
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+      - name: Push image to Docker Hub
+        run: make docker-push
