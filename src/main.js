@@ -1,5 +1,5 @@
 import Vue from 'vue'
-// import VueGtag from 'vue-gtag'
+import VueGtag from 'vue-gtag'
 import App from './App.vue'
 import router from './plugins/router/router'
 import vuetify from './plugins/vuetify/vuetify'
@@ -10,9 +10,9 @@ process.env.VUE_APP_RUNTIME_MODE === 'development'
   ? Vue.config.devtools = true
   : Vue.config.devtools = false;
 
-// Vue.use(VueGtag, {
-//   config: { id: 'G-W6VLCZHE51' }
-// });
+Vue.use(VueGtag, {
+  config: { id: 'G-MGYHZZV1WE' }
+});
 
 new Vue({
   router,

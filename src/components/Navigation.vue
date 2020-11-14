@@ -62,6 +62,5 @@ export default {
   /* 20px is equal to mx-5 */
   margin-left: 20px;
   margin-right: 20px;
-  /*font-family: 'Ubuntu',sans-serif;*/
 }
 </style>

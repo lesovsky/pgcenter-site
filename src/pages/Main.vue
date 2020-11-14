@@ -34,14 +34,11 @@ export default {
   background-size: cover;
   background-position: top;
   margin-top: 80px;
-  /*height: 100vh;*/
-  /*vertical-align: center;*/
 }
 .cs-title-margin {
   margin-top: 20vh;
 }
 .cs-title-font {
   color: #ffffff;
-  /*font-family: Ubuntu, sans-serif !important;*/
 }
 </style>
